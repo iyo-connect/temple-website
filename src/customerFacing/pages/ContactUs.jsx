@@ -21,7 +21,7 @@ const ContactUs = () => {
         <ContactForm />
       </div>
       <div className="md:container my-8 border p-8">
-        <MapComponent />
+        {/* <MapComponent /> */}
       </div>
     </div>
   );
