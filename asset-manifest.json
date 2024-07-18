@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/iyo-connect/temple-website/static/css/main.a376ce88.css",
-    "main.js": "/iyo-connect/temple-website/static/js/main.0e1ab198.js",
-    "static/media/god1.jpg": "/iyo-connect/temple-website/static/media/god1.684923cf99c174431c5f.jpg",
-    "static/media/about-banner_0.jpg": "/iyo-connect/temple-website/static/media/about-banner_0.73b953977ab503b73843.jpg",
-    "static/media/god2.jpg": "/iyo-connect/temple-website/static/media/god2.d34e6798c1487d52a4f1.jpg",
-    "static/media/logo.png": "/iyo-connect/temple-website/static/media/logo.42b5e48deea4098567ab.png",
-    "static/media/banerImg2.jpg": "/iyo-connect/temple-website/static/media/banerImg2.ef8da2da39a5a324db86.jpg",
-    "static/media/QRcode.jpeg": "/iyo-connect/temple-website/static/media/QRcode.6aa667ef3888550e2718.jpeg",
-    "static/media/donation-svgrepo-com.svg": "/iyo-connect/temple-website/static/media/donation-svgrepo-com.6898b86aa93e14aca7ffa88524139a05.svg",
-    "static/media/calendar-svgrepo-com.svg": "/iyo-connect/temple-website/static/media/calendar-svgrepo-com.5f19e0f95b578e50ee938f95a53cae58.svg",
-    "static/media/hindu-symbol-svgrepo-com.svg": "/iyo-connect/temple-website/static/media/hindu-symbol-svgrepo-com.f95ab1804091b909bb01ae6a5240d62a.svg",
-    "index.html": "/iyo-connect/temple-website/index.html",
-    "main.a376ce88.css.map": "/iyo-connect/temple-website/static/css/main.a376ce88.css.map",
-    "main.0e1ab198.js.map": "/iyo-connect/temple-website/static/js/main.0e1ab198.js.map"
+    "main.css": "/temple-website/static/css/main.a376ce88.css",
+    "main.js": "/temple-website/static/js/main.67ed57d4.js",
+    "static/media/god1.jpg": "/temple-website/static/media/god1.684923cf99c174431c5f.jpg",
+    "static/media/about-banner_0.jpg": "/temple-website/static/media/about-banner_0.73b953977ab503b73843.jpg",
+    "static/media/god2.jpg": "/temple-website/static/media/god2.d34e6798c1487d52a4f1.jpg",
+    "static/media/logo.png": "/temple-website/static/media/logo.42b5e48deea4098567ab.png",
+    "static/media/banerImg2.jpg": "/temple-website/static/media/banerImg2.ef8da2da39a5a324db86.jpg",
+    "static/media/QRcode.jpeg": "/temple-website/static/media/QRcode.6aa667ef3888550e2718.jpeg",
+    "static/media/donation-svgrepo-com.svg": "/temple-website/static/media/donation-svgrepo-com.6898b86aa93e14aca7ffa88524139a05.svg",
+    "static/media/calendar-svgrepo-com.svg": "/temple-website/static/media/calendar-svgrepo-com.5f19e0f95b578e50ee938f95a53cae58.svg",
+    "static/media/hindu-symbol-svgrepo-com.svg": "/temple-website/static/media/hindu-symbol-svgrepo-com.f95ab1804091b909bb01ae6a5240d62a.svg",
+    "index.html": "/temple-website/index.html",
+    "main.a376ce88.css.map": "/temple-website/static/css/main.a376ce88.css.map",
+    "main.67ed57d4.js.map": "/temple-website/static/js/main.67ed57d4.js.map"
   },
   "entrypoints": [
     "static/css/main.a376ce88.css",
-    "static/js/main.0e1ab198.js"
+    "static/js/main.67ed57d4.js"
   ]
 }
