@@ -13,10 +13,10 @@ const Donation = () => {
             <h1 className='absolute bottom-20 md:right-36 right-12 text-white font-medium md:text-6xl text-3xl'>Donation</h1>
         </div>
         <h1 className='font-bold md:text-6xl text-3xl text-center text-red-700 my-4'>General Donation</h1>
-        <div className="generalDonation flex flex-col md:flex-row border-lg rounded bg-gray-50 m-8 p-8 justify-around md:items-start items-center">
+        <div className="generalDonation flex flex-col md:flex-row border-lg rounded bg-gray-50 m-8 p-8 justify-around  md:items-start items-center">
             <div className="scan text-center my-4">
               <h3 className='font-medium text-2xl my-4'>Scan & pay with any UPI app</h3>
-              <img src={QRcode} alt="Scan&pay" className='' />
+              <img src={QRcode} alt="Scan&pay" className='inline' />
             </div>
             <div className="account text-center my-4">
               <h3 className='font-medium text-2xl my-4'>Direct Bank Account Details</h3>
