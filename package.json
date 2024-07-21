@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/iyo-connect/temple-website",
+  "homepage": "https://iyo-connect.github.io/",
   "name": "temple-website-v3",
   "version": "0.1.0",
   "private": true,
@@ -21,6 +21,7 @@
     "embla-carousel-react": "^8.1.6",
     "lucide-react": "^0.402.0",
     "react": "^18.3.1",
+    "react-calendar": "^5.0.0",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.1",
@@ -36,7 +37,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy" : "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
