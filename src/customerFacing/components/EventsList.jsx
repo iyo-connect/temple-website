@@ -49,6 +49,18 @@ const EventsList = () => {
       desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, quas?",
       startDate: "2024-08-08",
     },
+    {
+      id: 7,
+      name: "Event D",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, quas?",
+      startDate: "2024-08-10",
+    },
+    {
+      id: 8,
+      name: "Event E",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, quas?",
+      startDate: "2024-08-016",
+    },
   ];
 
   const fileteredEvents = sampleEvents.filter((event) => {
