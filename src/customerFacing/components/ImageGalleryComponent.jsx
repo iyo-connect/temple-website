@@ -28,7 +28,7 @@ const ImageGalleryComponent = ({ images }) => {
 
   return (
     <div className="relative">
-      <div className="grid  md:grid-cols-4 grid-cols-2 justify-center gap-4">
+      <div className="grid drop-shadow-lg md:p-8 p-2 mx-2 bg-blue-50  md:grid-cols-4 grid-cols-2 justify-center gap-4">
         {images.map((image, index) => (
           <img
             key={index}

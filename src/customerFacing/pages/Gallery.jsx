@@ -22,7 +22,7 @@ const Gallery = () => {
             <h1 className='absolute bottom-20 md:right-36 right-12 text-white font-medium md:text-6xl text-3xl'>Image Gallery</h1>
         </div>
 
-    <div className="container mx-auto py-10">
+    <div className="md:container mx-auto py-10">
           <h1 className="text-3xl font-bold mb-6">Image Gallery</h1>
           <ImageGalleryComponent images={imagesArr} />
         </div>
