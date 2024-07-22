@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       <HashRouter>
-        <BrowserRouter>
+        
           <HeaderComponent />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -27,7 +27,7 @@ function App() {
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           <FooterComponent />
-        </BrowserRouter>
+        
       </HashRouter>
     </div>
   );
