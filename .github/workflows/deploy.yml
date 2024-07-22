@@ -28,8 +28,9 @@ jobs:
       #   with: 
       #       name: 'github-pages'
       #       path: build
+      
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with: 
            branch: gh-pages
-           folder: ../
+           folder: build 
