@@ -20,7 +20,7 @@ function Navbar() {
 
   return (
     <nav className="bg-yellow-600  text-white p-4">
-      <div className="md:container mx-auto  flex items-center justify-between">
+      <div className="md:container mx-auto  flex items-center justify-between ">
         <Logo />
         <div className="hidden lg:flex space-x-4">
             {
@@ -41,7 +41,7 @@ function Navbar() {
         </button>
       </div>
       {menuOpen && (
-        <div className="lg:hidden flex flex-col gap-2">
+        <div className="lg:hidden flex flex-col  gap-2 ">
           
           {/* Mobile menu links */}
           {

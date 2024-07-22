@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import HeaderComponent from "./customerFacing/components/HeaderComponent";
 import FooterComponent from "./customerFacing/components/FooterComponent";
@@ -13,20 +13,22 @@ import Events from "./customerFacing/pages/Events";
 function App() {
   return (
     <div>
-      <BrowserRouter>
-        <HeaderComponent/>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/services" element={<div>Services</div>} />
-          <Route path="/donation" element={<Donation />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="*" element={<PageNotFound/>} />
-        </Routes>
-        <FooterComponent/>
-      </BrowserRouter>
+      <HashRouter>
+        <BrowserRouter>
+          <HeaderComponent />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/services" element={<div>Services</div>} />
+            <Route path="/donation" element={<Donation />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+          <FooterComponent />
+        </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
