@@ -23,16 +23,9 @@ jobs:
         run: npm ci
       - name: Build Project
         run: npm run build
-      # - name: Upload artifacts
-      #   uses: actions/upload-pages-artifact@v3
-      #   with: 
-      #       name: 'github-pages'
-      #       path: build
-      - name: Install rsync 📚
-        run: |
-             apt-get update && apt-get install -y rsync
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with: 
-           branch: gh-pages
-           folder: build 
+     - name: Deploy
+       uses: peaceiris/actions-gh-pages@v4
+       with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
