@@ -23,13 +23,13 @@ jobs:
         run: npm ci
       - name: Build Project
         run: npm run build
-      - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v3
-        with: 
-            name: 'github-pages'
-            path: build
+      # - name: Upload artifacts
+      #   uses: actions/upload-pages-artifact@v3
+      #   with: 
+      #       name: 'github-pages'
+      #       path: build
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: JamesIves/github-pages-deploy-action@4
         with: 
-            token: ${{ secrets.GITHUB_TOKEN }}
-            artifact_name: 'github-pages'
+           branch: gh-pages
+           folder: temple-website-v3
