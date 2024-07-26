@@ -1,5 +1,5 @@
 import React from 'react'
-import banerImg1 from "../../assets/images/about-banner_0.jpg"
+import banerImg1 from "../../assets/images/dailyprogamme_0.jpg"
 
 import PastEventsComponent from '../components/PastEventsComponent'
 import EventsList from '../components/EventsList'
