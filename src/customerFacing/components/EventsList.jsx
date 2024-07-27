@@ -67,6 +67,7 @@ const EventsList = () => {
     const eventDate = new Date(event.startDate);
     return eventDate.toDateString() === selectedDate.toDateString();
   });
+  // console.log(fileteredEvents)
 
   return (
     <div className="md:container md:m-8 m-4 flex md:flex-row flex-col justify-center md:items-start items-center md:gap-10">
@@ -84,7 +85,7 @@ const EventsList = () => {
           Events on {selectedDate.toDateString()}:
         </h2>
         <ul>
-          {fileteredEvents.map((event) => (
+          {fileteredEvents.length === 0 ? <span className="font-medium text-gray-700 text-xl">No Events</span> : fileteredEvents.map((event) => (
             <li key={event.id}>
               <h4 className="text-2xl font-medium text-gray-400 text-start">
                 {event.name}

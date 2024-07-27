@@ -1,6 +1,6 @@
 import banerImg1 from "../../assets/images/about-banner_0.jpg";
 import ContactForm from "../components/ContactForm";
-import MapComponent from "../components/MapComponent";
+// import MapComponent from "../components/MapComponent";
 
 const ContactUs = () => {
   return (
