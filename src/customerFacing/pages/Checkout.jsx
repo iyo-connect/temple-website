@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = ({ donationDetail }) => {
-  // console.log('abc----', donationDetail)
+  console.log('abc----', donationDetail)
+  const navigate = useNavigate()
 
   const [userInfo, setUserInfo] = useState({
     fullName: '',
@@ -15,6 +17,16 @@ const Checkout = ({ donationDetail }) => {
 
   })
 
+  useEffect(()=>{
+    setTimeout(()=>{
+
+      if(donationDetail.donationAmount === 0){
+        navigate('/services')
+      }
+    }, 3000)
+  })
+
+  
   const handleUserInfo = (e) =>{
     setUserInfo({ ...userInfo, [e.target.id]: e.target.value });
   }
@@ -28,6 +40,10 @@ const Checkout = ({ donationDetail }) => {
   return (
     
       <div className="flex flex-col md:flex-row p-6 space-x-4 bg-background rounded-lg shadow-md">
+        <div>
+          
+        </div>
+        {donationDetail.donationAmount === 0 ? "You are directing to Services page, kindy choose one of puja donations":
         <div className="flex-1 bg-card rounded-lg p-6">
           <h2 className="text-2xl font-bold mb-6 text-primary">YOUR DETAILS</h2>
           <form className="flex flex-col md:flex-row gap-10 ">
@@ -204,6 +220,7 @@ const Checkout = ({ donationDetail }) => {
             </div>
           </form>
         </div>
+        }
       </div>
     
   );
