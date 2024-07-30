@@ -10,7 +10,7 @@ permissions:
   id-token: write
 
 jobs:
-  # Build job
+  
   build:
     runs-on: ubuntu-latest
     steps:
