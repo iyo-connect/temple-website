@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on: 
   push:
-    branches: [main]
+    branches: [patch-1]
 
 permissions:
   contents: read
@@ -24,8 +24,4 @@ jobs:
       - name: Build Project
         run: npm run build
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
+        run: npm run deploy
