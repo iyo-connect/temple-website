@@ -1,150 +1,104 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import FormRow from "../components/FormRow";
 
 const Checkout = ({ donationDetail }) => {
-  console.log('abc----', donationDetail)
-  const navigate = useNavigate()
+  console.log("abc----", donationDetail);
+  const navigate = useNavigate();
 
   const [userInfo, setUserInfo] = useState({
-    fullName: '',
-    address:'',
-    city:'',
-    state:'',
-    pincode:'',
-    country: 'India',
-    whatsapp: '',
-    email:'',
+    fullName: "",
+    address: "",
+    city: "",
+    state: "",
+    pincode: "",
+    country: "India",
+    whatsapp: "",
+    email: "",
+  });
 
-  })
-
-  useEffect(()=>{
-    setTimeout(()=>{
-
-      if(donationDetail.donationAmount === 0){
-        navigate('/services')
+  useEffect(() => {
+    setTimeout(() => {
+      if (donationDetail.donationAmount === 0) {
+        navigate("/services");
       }
-    }, 3000)
-  })
+    }, 3000);
+  });
 
-  
-  const handleUserInfo = (e) =>{
+  const handleChange = (e) => {
     setUserInfo({ ...userInfo, [e.target.id]: e.target.value });
-  }
+  };
 
-  const handleSubmit = (e)=>{
-    e.preventDefault()
-    console.log(userInfo)
-  }
-  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(userInfo);
+  };
 
   return (
-    
-      <div className="flex flex-col md:flex-row p-6 space-x-4 bg-background rounded-lg shadow-md">
-        <div>
-          
-        </div>
-        {donationDetail.donationAmount === 0 ? "You are directing to Services page, kindy choose one of puja donations":
+    <div className="flex flex-col md:flex-row p-6 mb-8 space-x-4 bg-background rounded-lg shadow-md">
+      <div></div>
+      {donationDetail.donationAmount === 0 ? (
+        "You are directing to Services page, kindy choose one of puja donations"
+      ) : (
         <div className="flex-1 bg-card rounded-lg p-6">
           <h2 className="text-2xl font-bold mb-6 text-primary">YOUR DETAILS</h2>
           <form className="flex flex-col md:flex-row gap-10 ">
             <div className="flex flex-col md:w-2/3">
-              <div className="mb-4">
-                <label
-                  className="block text-sm font-medium text-muted-foreground"
-                  htmlFor="fullName"
-                >
-                  Full name *
-                </label>
-                <input
-                  className="border border-border rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-primary"
-                  type="text"
-                  id="fullName"
-                  value={userInfo.fullName}
-                  onChange={handleUserInfo}
-                  required
-                />
+              <FormRow
+                handleChange={handleChange}
+                type="text"
+                name="fullName"
+                labelText="Full Name"
+                value={userInfo.fullName}
+              />
+              <FormRow
+                handleChange={handleChange}
+                type="text"
+                name="address"
+                labelText="Address"
+                value={userInfo.address}
+              />
+              <div className="flex md:flex-row flex-col gap-4">
+                <div className="md:w-1/2 ">
+                  <FormRow
+                    handleChange={handleChange}
+                    type="text"
+                    name="city"
+                    labelText="City"
+                    value={userInfo.city}
+                  />
+                </div>
+                <div className="md:w-1/2 ">
+                  <FormRow
+                    handleChange={handleChange}
+                    type="text"
+                    name="state"
+                    labelText="State"
+                    value={userInfo.state}
+                  />
+                </div>
               </div>
-              <div className="mb-4">
-                <label
-                  className="block text-sm font-medium text-muted-foreground"
-                  htmlFor="address"
-                >
-                  Complete Address *
-                </label>
-                <input
-                  className="border border-border rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-primary"
-                  type="text"
-                  id="address"
-                  value={userInfo.completeAddress}
-                  onChange={handleUserInfo}
-                  required
-                />
+              <div className="flex md:flex-row flex-col gap-4 ">
+                <div className="md:w-1/2">
+                  <FormRow
+                    handleChange={handleChange}
+                    type="text"
+                    name="pincode"
+                    labelText="Pincode"
+                    value={userInfo.pincode}
+                  />
+                </div>
+                <div className="md:w-1/2">
+                  <FormRow
+                    handleChange={handleChange}
+                    type="text"
+                    name="country"
+                    labelText="Country"
+                    value={userInfo.country}
+                  />
+                </div>
               </div>
-              <div className="mb-4">
-                <label
-                  className="block text-sm font-medium text-muted-foreground"
-                  htmlFor="city"
-                >
-                  City *
-                </label>
-                <input
-                  className="border border-border rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-primary"
-                  type="text"
-                  id="city"
-                  value={userInfo.city}
-                  onChange={handleUserInfo}
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-sm font-medium text-muted-foreground"
-                  htmlFor="state"
-                >
-                  State *
-                </label>
-                <input
-                  className="border border-border rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-primary"
-                  type="text"
-                  id="state"
-                  value={userInfo.state}
-                  onChange={handleUserInfo}
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-sm font-medium text-muted-foreground"
-                  htmlFor="pincode"
-                >
-                  Pincode *
-                </label>
-                <input
-                  className="border border-border rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-primary"
-                  type="number"
-                  id="pincode"
-                  value={userInfo.pincode}
-                  onChange={handleUserInfo}
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-sm font-medium text-muted-foreground"
-                  htmlFor="country"
-                >
-                  Country *
-                </label>
-                <h2
-                  className="border border-border rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-primary"
-                  id="country"
-                  value={userInfo.country}
-                  onChange={handleUserInfo}
-                  required
-                >
-                  India
-                </h2>
-              </div>
+        
               <div className="mb-4">
                 <label
                   className="block text-sm font-medium text-muted-foreground"
@@ -161,7 +115,7 @@ const Checkout = ({ donationDetail }) => {
                     type="tel"
                     id="whatsapp"
                     value={userInfo.whatsapp}
-                    onChange={handleUserInfo}
+                    onChange={handleChange}
                     placeholder="9310269713"
                     required
                   />
@@ -171,22 +125,13 @@ const Checkout = ({ donationDetail }) => {
                   enter WhatsApp number to get transaction notifications.
                 </small>
               </div>
-              <div className="mb-4">
-                <label
-                  className="block text-sm font-medium text-muted-foreground"
-                  htmlFor="email"
-                >
-                  Email address *
-                </label>
-                <input
-                  className="border border-border rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-primary"
-                  type="email"
-                  id="email"
-                  value={userInfo.email}
-                  onChange={handleUserInfo}
-                  required
-                />
-              </div>
+              <FormRow
+                handleChange={handleChange}
+                type="email"
+                name="email"
+                labelText="Email"
+                value={userInfo.email}
+              />
             </div>
             <div className=" rounded-lg p-6 w-full h-min md:w-1/3 shadow-lg">
               <h2 className="text-2xl font-bold mb-6 text-primary">SUMMARY</h2>
@@ -209,7 +154,12 @@ const Checkout = ({ donationDetail }) => {
               <h3 className="text-lg font-semibold mb-4 text-primary">
                 Razorpay Online
               </h3>
-              <button type="submit" value='submit' className="bg-primary text-primary-foreground w-full p-3 rounded-lg hover:bg-primary/80 transition duration-200" onSubmit={handleSubmit}>
+              <button
+                type="submit"
+                value="submit"
+                className="bg-primary text-primary-foreground w-full p-3 rounded-lg hover:bg-primary/80 transition duration-200"
+                onSubmit={handleSubmit}
+              >
                 PLACE ORDER
               </button>
               <p className="text-sm text-muted-foreground mt-4">
@@ -220,9 +170,8 @@ const Checkout = ({ donationDetail }) => {
             </div>
           </form>
         </div>
-        }
-      </div>
-    
+      )}
+    </div>
   );
 };
 

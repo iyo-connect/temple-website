@@ -4,9 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 
 const DonationList = ({ pujas, donationDetail, setDonationDetail }) => {
+  
   const navigate = useNavigate()
-
- 
 
   const handleDonate = (puja) => {
     setDonationDetail({...donationDetail, pujaName: puja.pujaName, donationAmount: puja.donationAmount})   
@@ -28,13 +27,15 @@ const DonationList = ({ pujas, donationDetail, setDonationDetail }) => {
                   </small>
                 </td>
                 <td className="w-1/3">
-                  <button  onClick={()=> handleDonate(puja)} className="bg-red-800  text-slate-200 md:text-lg text-sm font-sm rounded px-2 py-1" >Donate now</button>
+                  <button  onClick={()=> handleDonate(puja)} className="bg-red-800  text-slate-200 md:text-lg text-sm font-sm rounded px-2 py- transition-transform transform hover:scale-105" >Donate now</button>
                 </td>
               </tr>
             );
           })}
         </tbody>
       </table>
+
+      
     </div>
   );
 };

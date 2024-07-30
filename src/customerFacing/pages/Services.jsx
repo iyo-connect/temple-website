@@ -1,14 +1,23 @@
 import React from "react";
 import banerImg2 from "../../assets/images/banerImg2.jpg";
 import DonationList from "../components/DonationList";
+import AnnaDhanam from "../components/AnnaDhanam";
 
-const Services = ({donationDetail, setDonationDetail}) => {
+const Services = ({ donationDetail, setDonationDetail }) => {
   const pujas = [
     { pujaName: "Archana Thali", donationAmount: 251 },
     { pujaName: "Aarti Archana Thali", donationAmount: 501 },
     { pujaName: "Maha Aarti Archana Thali", donationAmount: 1100 },
     { pujaName: "Maha Bhog Aarti Archana Thali", donationAmount: 2100 },
   ];
+
+  const annaDhanam = [
+    {meal: "21 Meals", desc: "Do your part and contribute this to serve the Needy.", amount: 525},
+    {meal: "51 Meals", desc: "Help us to feed the Needy, do your part by donation.", amount: 1275},
+    {meal: "101 Meals", desc: "Provide the Food to 101 Needy People. Support us.", amount: 2525},
+    {meal: "151 Meals", desc: "You can help us to feed the hungry. Support us.", amount: 3775}
+  ]
+
   return (
     <div className="">
       <div className="relative mb-4">
@@ -32,8 +41,29 @@ const Services = ({donationDetail, setDonationDetail}) => {
           out during these uncertain times. <br /> His devotees are incredibly
           dear to Krishna.
         </p>
-        
-        <DonationList pujas={pujas} donationDetail={donationDetail} setDonationDetail={setDonationDetail}/>
+
+        <DonationList
+          pujas={pujas}
+          donationDetail={donationDetail}
+          setDonationDetail={setDonationDetail}
+        />
+      </div>
+      <div className="border shadow-lg md:p-8 p-2 rounded-lg bg-gray-100 md:m-8 m-4">
+        <h2 className="font-bold md:text-3xl text-2xl mb-2 text-red-800">
+          Anna danam or Anna daan is maha daan
+        </h2>
+        <p className="md:text-xl mb-8">
+          Anna means food, and Daan means donation. Making assure that no one
+          goes hungry is what we as a society believe in collectively. Acts such
+          as these will eliminate the continuous cycle of starvation,
+          undernourishment, and suffering, enabling the poor to live a better
+          life. <br /> <br />
+        </p>
+        <AnnaDhanam
+          annaDhanam = {annaDhanam}
+          donationDetail={donationDetail}
+          setDonationDetail={setDonationDetail}
+        />
       </div>
     </div>
   );
