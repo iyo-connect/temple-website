@@ -21,10 +21,8 @@ const ContactForm = () => {
     e.preventDefault();
     // Handle form submission 
 
-    console.log('Full Name:', contactValues.fullName);
-    console.log('Email:', contactValues.email);
-    console.log('Subject:', contactValues.subject);
-    console.log('Message:', contactValues.message);
+    console.log('Contact Values:', contactValues);
+   
   };
 
   return (
@@ -87,7 +85,7 @@ const ContactForm = () => {
       </div>
       <button
         type="submit"
-        onClick={handleSubmit}
+        onSubmit={handleSubmit}
         className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
       >
         Submit
