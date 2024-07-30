@@ -1,15 +1,15 @@
 import React from "react";
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const AnnaDhanam = ({ annaDhanam }) => {
-  //  const navigate = useNavigate()
+//    const navigate = useNavigate()
 
   const [annaDhanam1, annaDhanam2, annaDhanam3, annaDhanam4] = annaDhanam;
 
-  // const handleDonate = (dhanam) => {
-  //     setDonationDetail({...donationDetail, pujaName: dhanam.meal, donationAmount: dhanam.amount})
-  //     navigate('/checkout')
-  //   };
+//   const handleDonate = (dhanam) => {
+//       setDonationDetail({...donationDetail, pujaName: dhanam.meal, donationAmount: dhanam.amount})
+//       navigate('/checkout')
+//     };
   return (
     <div className="m-2 border shadow-lg  p-2 rounded-lg py-4">
       <h2 className="font-bold md:text-3xl text-2xl mb-2 text-red-800 md:px-8 px-4 text-center">
