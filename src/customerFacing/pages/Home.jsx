@@ -4,11 +4,36 @@ import OnlineServiceComponent from "../components/OnlineServiceComponent";
 import PastEventsComponent from "../components/PastEventsComponent";
 import { Trans, useTranslation } from "react-i18next";
 import LanguageSelector from "../components/LanguageSelector";
+import AnnaDhanam from "../components/AnnaDhanam";
 
 function Home() {
   const { t } = useTranslation();
 
   const { line1, line2 } = t("description");
+
+  const annaDhanam = [
+    {
+      meal: "21 Meals",
+      desc: "Do your part and contribute this to serve the Needy.",
+      amount: 525,
+    },
+    {
+      meal: "51 Meals",
+      desc: "Help us to feed the Needy, do your part by donation.",
+      amount: 1275,
+    },
+    {
+      meal: "101 Meals",
+      desc: "Provide the Food to 101 Needy People. Support us.",
+      amount: 2525,
+    },
+    {
+      meal: "151 Meals",
+      desc: "You can help us to feed the hungry. Support us.",
+      amount: 3775,
+    },
+  ];
+
   return (
     <div>
       {/* translation */}
@@ -70,6 +95,7 @@ function Home() {
       {/* Online service  */}
       <OnlineServiceComponent />
       {/* Online service  */}
+      <AnnaDhanam annaDhanam={annaDhanam} />
       {/* Events section */}
       <PastEventsComponent />
       {/* Events section */}

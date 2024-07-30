@@ -30,7 +30,7 @@ const Services = ({ donationDetail, setDonationDetail }) => {
           Online Puja
         </h1>
       </div>
-      <div className="border shadow-lg md:p-8 p-2 rounded-lg bg-gray-100 md:m-8 m-4">
+      <div className="border shadow-lg md:p-8 p-2 rounded-lg  md:m-8 m-4">
         <h2 className="font-bold md:text-3xl text-2xl mb-2 text-red-800">
           Show compassion and love
         </h2>
@@ -49,16 +49,7 @@ const Services = ({ donationDetail, setDonationDetail }) => {
         />
       </div>
       <div className="border shadow-lg md:p-8 p-2 rounded-lg bg-gray-100 md:m-8 m-4">
-        <h2 className="font-bold md:text-3xl text-2xl mb-2 text-red-800">
-          Anna danam or Anna daan is maha daan
-        </h2>
-        <p className="md:text-xl mb-8">
-          Anna means food, and Daan means donation. Making assure that no one
-          goes hungry is what we as a society believe in collectively. Acts such
-          as these will eliminate the continuous cycle of starvation,
-          undernourishment, and suffering, enabling the poor to live a better
-          life. <br /> <br />
-        </p>
+        
         <AnnaDhanam
           annaDhanam = {annaDhanam}
           donationDetail={donationDetail}
