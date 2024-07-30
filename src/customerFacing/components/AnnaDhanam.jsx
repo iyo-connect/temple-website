@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom';
 
 const AnnaDhanam = ({ annaDhanam ,donationDetail, setDonationDetail}) => {
 
-     const navigate = useNavigate()
+    //  const navigate = useNavigate()
 
     const [annaDhanam1, annaDhanam2, annaDhanam3, annaDhanam4] = annaDhanam
 
-    const handleDonate = (dhanam) => {
-        setDonationDetail({...donationDetail, pujaName: dhanam.meal, donationAmount: dhanam.amount})   
-        navigate('/checkout')
-      };
+    // const handleDonate = (dhanam) => {
+    //     setDonationDetail({...donationDetail, pujaName: dhanam.meal, donationAmount: dhanam.amount})   
+    //     navigate('/checkout')
+    //   };
   return (
     <div>
         <div className="flex flex-wrap justify-center p-6 bg-background">
