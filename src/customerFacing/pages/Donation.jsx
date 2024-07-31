@@ -3,8 +3,6 @@ import banerImg2 from "../../assets/images/banerImg2.jpg"
 import QRcode from "../../assets/images/QRcode.jpeg"
 
 
-
-
 const Donation = ({donationDetail}) => {
   console.log(donationDetail)
   return (
