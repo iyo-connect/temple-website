@@ -3,7 +3,7 @@ import banerImg2 from "../../assets/images/banerImg2.jpg";
 import DonationList from "../components/DonationList";
 import AnnaDhanam from "../components/AnnaDhanam";
 
-const Services = ({ donationDetail, setDonationDetail }) => {
+const Services = ({ annaDhanam, donationDetail, setDonationDetail }) => {
   const pujas = [
     { pujaName: "Archana Thali", donationAmount: 251 },
     { pujaName: "Aarti Archana Thali", donationAmount: 501 },
@@ -11,12 +11,8 @@ const Services = ({ donationDetail, setDonationDetail }) => {
     { pujaName: "Maha Bhog Aarti Archana Thali", donationAmount: 2100 },
   ];
 
-  const annaDhanam = [
-    {meal: "21 Meals", desc: "Do your part and contribute this to serve the Needy.", amount: 525},
-    {meal: "51 Meals", desc: "Help us to feed the Needy, do your part by donation.", amount: 1275},
-    {meal: "101 Meals", desc: "Provide the Food to 101 Needy People. Support us.", amount: 2525},
-    {meal: "151 Meals", desc: "You can help us to feed the hungry. Support us.", amount: 3775}
-  ]
+  
+  
 
   return (
     <div className="">
@@ -49,9 +45,8 @@ const Services = ({ donationDetail, setDonationDetail }) => {
         />
       </div>
       <div className="border shadow-lg md:p-8 p-2 rounded-lg bg-gray-100 md:m-8 m-4">
-        
         <AnnaDhanam
-          annaDhanam = {annaDhanam}
+          annaDhanam={annaDhanam}
           donationDetail={donationDetail}
           setDonationDetail={setDonationDetail}
         />
