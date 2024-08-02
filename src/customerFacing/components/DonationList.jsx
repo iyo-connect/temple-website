@@ -9,7 +9,7 @@ const DonationList = ({ pujas, donationDetail, setDonationDetail }) => {
 
   const handleDonate = (puja) => {
     setDonationDetail({...donationDetail, pujaName: puja.pujaName, donationAmount: puja.donationAmount})   
-    navigate('/checkout')
+    navigate('/donation')
   };
 
 
