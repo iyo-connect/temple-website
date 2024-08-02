@@ -10,8 +10,8 @@ import Gallery from "./customerFacing/pages/Gallery";
 import Donation from "./customerFacing/pages/Donation";
 import Events from "./customerFacing/pages/Events";
 import Services from "./customerFacing/pages/Services";
-import Checkout from "./customerFacing/pages/Checkout";
 import { useState } from "react";
+import LanguageSelector from "./customerFacing/components/LanguageSelector";
 
 function App() {
   const [donationDetail, setDonationDetail] = useState({
@@ -55,12 +55,12 @@ function App() {
       <HashRouter>
         
           <HeaderComponent />
+          <LanguageSelector />
           <Routes>
             <Route path="/" element={<Home annaDhanam={annaDhanam} donationDetail={donationDetail} setDonationDetail={setDonationDetail}/>} />
             <Route path="/about" element={<About />} />
             <Route path="/events" element={<Events />} />
             <Route path="/services" element={<Services annaDhanam={annaDhanam} donationDetail={donationDetail} setDonationDetail={setDonationDetail} />} />
-            <Route path="/checkout" element={<Checkout donationDetail={donationDetail} />} />
             <Route path="/donation" element={<Donation donationDetail={donationDetail} />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<ContactUs />} />

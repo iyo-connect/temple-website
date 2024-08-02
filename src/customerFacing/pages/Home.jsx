@@ -3,7 +3,6 @@ import god1 from "../../assets/images/god1.jpg";
 import OnlineServiceComponent from "../components/OnlineServiceComponent";
 import PastEventsComponent from "../components/PastEventsComponent";
 import { Trans, useTranslation } from "react-i18next";
-import LanguageSelector from "../components/LanguageSelector";
 import AnnaDhanam from "../components/AnnaDhanam";
 
 function Home({annaDhanam, donationDetail, setDonationDetail}) {
@@ -13,9 +12,6 @@ function Home({annaDhanam, donationDetail, setDonationDetail}) {
 
   return (
     <div>
-      {/* translation */}
-      <LanguageSelector />
-      {/* translation */}
       <div className="flex justify-center items-center ">
         <div
           className="relative bg-cover bg-center h-[400px] w-full "
@@ -40,8 +36,7 @@ function Home({annaDhanam, donationDetail, setDonationDetail}) {
       <section className="about-section md:mx-4 my-4 md:p-8 p-2 bg-gray-50 drop-shadow">
         <div className="container text-center py-4">
           {/* translation examples */}
-          <h1 className="text-4xl mb-8">{t("greeting")}</h1>
-          <p>{line2}</p>
+          <h1 className="text-4xl mb-4">{t("greeting")}</h1>
           <Trans
             // i18nKey={"description.line1"}
             i18nKey={line1}
@@ -49,10 +44,11 @@ function Home({annaDhanam, donationDetail, setDonationDetail}) {
               title: "Temple Name",
             }}
             components={{ 1: <b /> }}
-          />
+            />
+            <p>{line2}</p>
           {/* translation examples */}
 
-          <h2 className="text-red-900 sm:text-5xl text-2xl font-bold mb-4">
+          <h2 className="text-red-900 sm:text-5xl text-2xl font-bold my-4">
             About
           </h2>
           <p className="sm:m-4 my-4 sm:px-20 sm:text-xl sm:leading-10">
