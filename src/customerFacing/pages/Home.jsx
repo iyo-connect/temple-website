@@ -5,7 +5,7 @@ import PastEventsComponent from "../components/PastEventsComponent";
 import { Trans, useTranslation } from "react-i18next";
 import AnnaDhanam from "../components/AnnaDhanam";
 
-function Home({annaDhanam, donationDetail, setDonationDetail}) {
+function Home({ annaDhanam, donationDetail, setDonationDetail }) {
   const { t } = useTranslation();
 
   const { line1, line2 } = t("description");
@@ -19,8 +19,7 @@ function Home({annaDhanam, donationDetail, setDonationDetail}) {
         >
           <div className="absolute  bottom-20 left-10 text-white transparent  ">
             <p className="bg-bold text-2xl mb-2">
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis, rem."
+            {line2}
             </p>
             <div className="text-center">
               <button className="rounded px-4 bg-red-800 text-gray-50 p-2 ">
@@ -44,8 +43,8 @@ function Home({annaDhanam, donationDetail, setDonationDetail}) {
               title: "Temple Name",
             }}
             components={{ 1: <b /> }}
-            />
-            <p>{line2}</p>
+          />
+          <p>{line2}</p>
           {/* translation examples */}
 
           <h2 className="text-red-900 sm:text-5xl text-2xl font-bold my-4">
@@ -68,7 +67,11 @@ function Home({annaDhanam, donationDetail, setDonationDetail}) {
       {/* Online service  */}
       <OnlineServiceComponent />
       {/* Online service  */}
-      <AnnaDhanam annaDhanam={annaDhanam} donationDetail={donationDetail} setDonationDetail={setDonationDetail} />
+      <AnnaDhanam
+        annaDhanam={annaDhanam}
+        donationDetail={donationDetail}
+        setDonationDetail={setDonationDetail}
+      />
       {/* Events section */}
       <PastEventsComponent />
       {/* Events section */}
