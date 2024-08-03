@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import HeaderComponent from "./customerFacing/components/HeaderComponent";
 import FooterComponent from "./customerFacing/components/FooterComponent";
@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div>
-        <BrowserRouter basename='/temple-website'>
+        <HashRouter>
           <HeaderComponent />
           <LanguageSelector />
           <Routes>
@@ -66,7 +66,7 @@ function App() {
             <Route path="*" element={<PageNotFound  />} />
           </Routes>
           <FooterComponent />
-    </BrowserRouter>
+    </HashRouter>
         
     </div>
   );
