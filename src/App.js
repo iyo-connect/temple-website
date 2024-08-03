@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import HeaderComponent from "./customerFacing/components/HeaderComponent";
 import FooterComponent from "./customerFacing/components/FooterComponent";
@@ -52,8 +52,7 @@ function App() {
 
   return (
     <div>
-      <HashRouter>
-        
+      
           <HeaderComponent />
           <LanguageSelector />
           <Routes>
@@ -68,7 +67,6 @@ function App() {
           </Routes>
           <FooterComponent />
         
-      </HashRouter>
     </div>
   );
 }
@@ -78,9 +76,9 @@ function App() {
 
 function WrappedApp() {
   return (
-    <HashRouter basename='/temp'>
+    <BrowserRouter basename='/'>
       <App />
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
