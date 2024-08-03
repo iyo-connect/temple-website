@@ -2,12 +2,18 @@ name: Deploy to GitHub Pages
 
 on: 
   push:
-    branches: [patch-1]
+    branches: [main]
+
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+workflow_dispatch: # Enables manual trigger from the GitHub UI
 
 jobs:
   build-and-deploy:
