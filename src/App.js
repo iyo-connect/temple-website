@@ -53,6 +53,7 @@ function App() {
   return (
     <div>
         <HashRouter>
+          <p>Hi,...</p>
           <HeaderComponent />
           <LanguageSelector />
           <Routes>

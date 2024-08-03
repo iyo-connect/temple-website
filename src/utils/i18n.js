@@ -2,9 +2,8 @@ import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 import Backend from "i18next-http-backend"
-import homeEnLang from '../assets/locales/en/home.json'
-import aboutEnLang from '../assets/locales/en/home.json'
-import taLang from '../assets/locales/ta/home.json'
+import enLang from '../assets/locales/en/translation.json'
+import taLang from '../assets/locales/ta/translation.json'
 
 i18n
   .use(LanguageDetector)
@@ -17,7 +16,7 @@ i18n
     resources:{
         en:{
           
-          translation: homeEnLang,  aboutEnLang
+          translation: enLang
           // {
           //       greeting: "Hello, Welcome! ",
           //       description: {
