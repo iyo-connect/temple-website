@@ -52,8 +52,7 @@ function App() {
 
   return (
     <div>
-        <BrowserRouter basename='/'>
-
+        <BrowserRouter basename='/temple-website'>
           <HeaderComponent />
           <LanguageSelector />
           <Routes>
