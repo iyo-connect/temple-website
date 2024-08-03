@@ -73,4 +73,15 @@ function App() {
   );
 }
 
-export default App;
+// export default App;
+
+
+function WrappedApp() {
+  return (
+    <HashRouter basename='/temp'>
+      <App />
+    </HashRouter>
+  );
+}
+
+export default WrappedApp;
