@@ -79,4 +79,6 @@ function Home({ annaDhanam, donationDetail, setDonationDetail }) {
   );
 }
 
+// "homepage": "https://iyo-connect.github.io/temple-website/",
+
 export default Home;

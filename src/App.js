@@ -52,7 +52,8 @@ function App() {
 
   return (
     <div>
-      
+        <BrowserRouter basename='/'>
+
           <HeaderComponent />
           <LanguageSelector />
           <Routes>
@@ -66,20 +67,10 @@ function App() {
             <Route path="*" element={<PageNotFound  />} />
           </Routes>
           <FooterComponent />
+    </BrowserRouter>
         
     </div>
   );
 }
 
-// export default App;
-
-
-function WrappedApp() {
-  return (
-    <BrowserRouter basename='/'>
-      <App />
-    </BrowserRouter>
-  );
-}
-
-export default WrappedApp;
+export default App;
