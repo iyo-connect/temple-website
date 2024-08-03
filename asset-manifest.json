@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/temple-website/static/css/main.bfda737d.css",
-    "main.js": "/temple-website/static/js/main.ea637259.js",
+    "main.js": "/temple-website/static/js/main.930b0a9d.js",
     "static/media/god1.jpg": "/temple-website/static/media/god1.684923cf99c174431c5f.jpg",
     "static/media/about-banner_0.jpg": "/temple-website/static/media/about-banner_0.73b953977ab503b73843.jpg",
     "static/media/god2.jpg": "/temple-website/static/media/god2.d34e6798c1487d52a4f1.jpg",
@@ -15,10 +15,10 @@
     "index.html": "/temple-website/index.html",
     "static/media/getFetch.cjs": "/temple-website/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
     "main.bfda737d.css.map": "/temple-website/static/css/main.bfda737d.css.map",
-    "main.ea637259.js.map": "/temple-website/static/js/main.ea637259.js.map"
+    "main.930b0a9d.js.map": "/temple-website/static/js/main.930b0a9d.js.map"
   },
   "entrypoints": [
     "static/css/main.bfda737d.css",
-    "static/js/main.ea637259.js"
+    "static/js/main.930b0a9d.js"
   ]
 }
