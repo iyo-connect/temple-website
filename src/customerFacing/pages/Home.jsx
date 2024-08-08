@@ -12,6 +12,7 @@ function Home({ annaDhanam, donationDetail, setDonationDetail }) {
   const {about_home, about_god_name, about_home_last } = t("about");
   const {pooja_seva, more} = t("buttons")
 
+
   return (
     <div>
       <div className="flex justify-center items-center ">
@@ -41,7 +42,7 @@ function Home({ annaDhanam, donationDetail, setDonationDetail }) {
             // i18nKey={"description.line1"}
             i18nKey={line1}
             values={{
-              title: "Temple Name",
+              title: "Sri Kailasanathar Temple",
             }}
             components={{ 1: <b /> }}
           />

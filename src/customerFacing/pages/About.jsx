@@ -13,7 +13,7 @@ const About = () => {
     ]
 
     const {about_home, about_god_name, about_home_last } = t("about");
-    const {about_para1, about_para2, about_para3} = t("about_page")
+    const {about_para1, about_para2, about_para3, about_para4, about_para5, about_para6, about_para7, about_para8} = t("about_page")
 
   return (
     <div className='md:container'>
@@ -22,7 +22,7 @@ const About = () => {
             <h1 className='absolute bottom-20 md:right-36 right-12 text-white font-medium md:text-6xl text-3xl'>About</h1>
         </div>
         
-        <div className="history my-12 bg-gradient-to-r from-indigo-300 border-2 drop-shadow-lg md:p-8 p-4">
+        <div className="history my-12 bg-gradient-to-r from-indigo-100 to-lime-50 rounded-3xl font-semibold border-2 drop-shadow-lg md:p-8 p-4">
             <h2 className='text-3xl font-medium'>History</h2>
             <p className="sm:m-4 my-4 sm:px-20 sm:text-xl sm:leading-10">
             {about_home}{" "}
@@ -44,8 +44,23 @@ const About = () => {
             <p className="md:container my-2 sm:leading-6">
                 {about_para3}
             </p>
+            <p className="md:container my-2 sm:leading-6">
+                {about_para4}
+            </p>
+            <p className="md:container my-2 sm:leading-6">
+                {about_para5}
+            </p>
+            <p className="md:container my-2 sm:leading-6">
+                {about_para6}
+            </p>
+            <p className="md:container my-2 sm:leading-6">
+                {about_para7}
+            </p>
+            <p className="md:container my-2 sm:leading-6">
+                {about_para8}
+            </p>
         </div>
-        <div className="administration my-12 bg-gradient-to-r from-indigo-300 border-2 drop-shadow-lg p-8">
+        <div className="administration my-12 bg-gradient-to-r from-indigo-100 to-lime-50 rounded-3xl border-2 drop-shadow-lg p-8">
             <h2 className='text-3xl font-medium'>Administration</h2>
             <div className="flex md:flex-row flex-col gap-4 items-center justify-around my-4 py-2 px-4">
                 {administration.map(({name, position}, index)=>(

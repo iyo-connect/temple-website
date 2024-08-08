@@ -1,26 +1,35 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next'
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 const languages = [
-    {code:'en', lang:"English"},
-    {code:'ta', lang:"Tamil"},
-    {code:'hi', lang:"Hindi"},
-]
+  { code: "en", lang: "English" },
+  { code: "ta", lang: "Tamil" },
+  { code: "hi", lang: "Hindi" },
+];
 
 const LanguageSelector = () => {
-    const {i18n} = useTranslation()
+  const { i18n } = useTranslation();
 
-    const changeLanguage = (lng) =>{
-        i18n.changeLanguage(lng)
-    }
+  const changeLanguage = (event) => {
+    const selectedLanguage = event.target.value;
+    i18n.changeLanguage(selectedLanguage);
+  };
 
   return (
-    <div className='md:container flex md:gap-4 gap-1 m-1 items-center'>
-        {languages.map((lng)=>{
-            return <button className='bg-slate-900 text-gray-50 hover:text-yellow-500 rounded px-4 py-1 hover:bg-slate-700' key={lng.code} onClick={()=>changeLanguage(lng.code)}> {lng.lang} </button>
-        })}
-    </div>
-  )
-}
+    <>
+      <select
+        className=" my-1 w-min bg-slate-900 text-gray-50 hover:text-yellow-500 rounded px-2 py-1  hover:bg-slate-700"
+        onChange={changeLanguage}
+        defaultValue={localStorage.getItem('i18nextLng') || 'en'}
+      >
+        {languages.map((lng) => (
+          <option key={lng.code} value={lng.code}>
+            {lng.lang}
+          </option>
+        ))}
+      </select>
+    </>
+  );
+};
 
-export default LanguageSelector
+export default LanguageSelector;

@@ -11,39 +11,43 @@ import Donation from "./customerFacing/pages/Donation";
 import Events from "./customerFacing/pages/Events";
 import Services from "./customerFacing/pages/Services";
 import { useState } from "react";
-import LanguageSelector from "./customerFacing/components/LanguageSelector";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const {t} = useTranslation()
+
   const [donationDetail, setDonationDetail] = useState({
     pujaName: "",
     donationAmount: 0,
   });
 
+  const {meal1, meal2, meal3, meal4} = t("annaDhanam.annaDhanam_meal")
+
   const annaDhanam = [
     {
       meal: "21 Meals",
-      desc: "Do your part and contribute this to serve the Needy.",
+      desc: meal1,
       amount: 525,
       fromColor: "from-purple-400",
       toColor: "to-pink-500",
     },
     {
       meal: "51 Meals",
-      desc: "Help us to feed the Needy, do your part by donation.",
+      desc: meal2,
       amount: 1275,
       fromColor: "from-green-400",
       toColor: "to-blue-500",
     },
     {
       meal: "101 Meals",
-      desc: "Provide the Food to 101 Needy People. Support us.",
+      desc: meal3,
       amount: 2525,
       fromColor: "from-yellow-400",
       toColor: "to-red-500",
     },
     {
       meal: "151 Meals",
-      desc: "You can help us to feed the hungry. Support us.",
+      desc: meal4,
       amount: 3775,
       fromColor: "from-red-400",
       toColor: "to-orange-500",
@@ -53,9 +57,7 @@ function App() {
   return (
     <div>
         <HashRouter>
-          <p>Hi,...</p>
           <HeaderComponent />
-          <LanguageSelector />
           <Routes>
             <Route path="/" element={<Home annaDhanam={annaDhanam} donationDetail={donationDetail} setDonationDetail={setDonationDetail}/>} />
             <Route path="/about" element={<About />} />

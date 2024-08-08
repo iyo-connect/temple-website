@@ -42,10 +42,11 @@ const PastEventsComponent = () => {
       </h2>
       <div className="container-full flex lg:flex-row flex-col gap-4">
         {pastEvents.map((pastEvent, index) => (
-          <div className="lg:w-1/4  flex flex-col gap-4 items-center border rounded-lg p-8 h-min" key={index}>
+          <div className="lg:w-1/4  flex flex-col gap-4 items-center border rounded-lg p-8 h-min hover:scale-105 transition-transform transform" key={index}>
             <img src={pastEvent.event_img} alt="godImg" />
             <h4 className="font-semibold text-xl">{pastEvent.title}</h4>
             <p>{pastEvent.story}</p>
+            <hr className="bg-gray-200 h-1 w-full"/>
             <button className="font-medium bg-red-700 text-gray-50 px-8 py-2 rounded ">
               <Link to="#">{read_more}</Link>
             </button>
