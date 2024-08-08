@@ -1,0 +1,101 @@
+{
+  "templeName":"Sri Kailasanathar Temple",
+    "greeting": "Welcome!",
+    "description": {
+      "line1":
+        "<1>Live and allow others to live</1>; hurt no one; life is dear to all living beings. - <1>{{title}}</1>",
+      "line2":
+        "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment."
+    },
+    "homepage_headers":{
+      "online_service":"Online services"
+  },
+    "about":{
+      "about_home": "Siva, as Shenbakeswarar (or Sanbakeswarar), came to this place and hid Himself on a small hillock near the Palar river.",
+      "about_god_name": "<2><10>Parvati</10></2>",
+      "about_home_last":"came here in search of Siva, and climbed the hillock on Her knees. Once they were reunited, they stayed here as Kailasanathar and Kanakambigai."
+    },
+    "annaDhanam":{
+      "annaDhanam_text": "Anna means food, and Daan means donation. Making assure that no one goes hungry is what we as a society believe in collectively. Acts such as these will eliminate the continuous cycle of starvation undernourishment, and suffering, enabling the poor to live a better life.",
+      "annaDhanam_meal":{
+        "meal1":"Do your part and contribute this to serve the Needy.",
+        "meal2":"Help us to feed the Needy, do your part by donation.",
+        "meal3":"Provide the Food to 101 Needy People. Support us.",
+        "meal4":"You can help us to feed the hungry. Support us."
+      }
+    },
+    "buttons":{
+      "pooja_seva":"Pooja Seva",
+      "more":"More",
+      "read_more":"Read more",
+      "donate_now": "Donate now",
+      "donation": "Donation",
+      "events": "Events",
+      "pooja": "Pooja"
+    },
+    "past_events":{
+      "event1":{
+        "event_title1":"Celeberation of Mahotasava",
+        "event_story1":"Panihati Chida-dahi Mahotsava, also known as Danda Mahotsava (The Festival of Punishment), was celebrated at ISKCON Sri Radha Krishna Temple, Rajajinagar, on 20 June 2024, the Trayodashi tithi, or thirteenth day of the..."
+      },
+      "event2":{
+        "event_title2":"Sri Brahmotsava celebrations at ISKCON Vaikuntha Hill",
+        "event_story2":"ISKCON Bangalore celebrated the 2nd annual Brahmotsava festival of ISKCON Vaikuntha Hill, Vasanthapura, with great pomp and fervour from 19 to 21 June 2024. This festival commemorates the auspicious appearance of the presiding..."
+      },
+      "event3":{
+        "event_title3":"Grand Snana Yatra at ISKCON Vaikuntha Hill",
+        "event_story3":"The Snana Yatra, the divine bathing ceremony of Their Lordships Sri Jagannatha, Baladeva and Subhadra, was celebrated at ISKCON Vaikuntha Hill, Vasanthapura on 22 June 2024. Devotees from far and wide gathered for..."
+      },
+      "event4":{
+        "event_title4":"ISKCON Vaikuntha Hill celebrated annual Ratha Yatra",
+        "event_story4":"ISKCON Vaikuntha Hill celebrated the annual Sri Jagannatha Baladeva Subhadra Ratha Yatra festival on 7 July 2024 with three chariots decorated with flowers and festoons. Harinama Sankirtana accompanied the procession around the temple..."
+      }
+    },
+    "about_page":{
+      "about_para1":"At the adjoining village of Ayapakkam are two Siva temples - one for Jambukeswarar and one for Shenbakeswarar (see sthala puranam above). The Nandi of the Shenbakeswarar temple is seen facing this Kailasanathar temple, awaiting Siva's arrival here.",
+      "about_para2":"This temple is constructed on what is today an island in the Palar river, which can get quite rough during floods. In olden times, it is possible that this was an extension or outcrop of land into the river, but the rough waters have carved an island here (there are huge boulders placed on the island’s banks, to protect it from the river waters). The temple can be reached via a walkway bridge, which leads straight up to a huge murti of Dakshinamurti.",
+
+      "about_para3":"The temple is well maintained, and a great place to visit. Because of much renovation here in recent times, a lot of the antiquity is, however, lost.",
+
+      "about_para4":"At the entrance to the garbhagriham, there is a lion pillar (which was a favourite motif of the Pallavas), as well as an inscription from the time of the Pallava king Nrupathunga. Based on his regnal years (869-880), this temple may be dated to the latter part of the 9th century, when this place was called Saileswaram.",
+
+      "about_para5":"The temple itself is fairly simple - the garbhagriham has a passage around it, and an ardha mandapam, with Vinayakar and Murugan guarding either side, and an Amman shrine facing south. It is believed that in its original form, there was no separate shrine for Amman in the temple. The Amman that is currently installed here is a recent addition.",
+      "about_para6":"There is also a sort of rock-like structure with  about 10 indentations in it - these are believed to be the marks of Parvati's knees, when She came looking for Siva here. There is also a carving depicting Siva as Kailasanathar, seated in meditation, with an umbrella over Him, and Kamadhenu pouring her milk over Him. In addition, sage Suka is said to have worshipped here.",
+      "about_para7":"Earlier, the south-facing Dakshinamurti at the end of the entry bridge, was open to air. It has been now, and the pathway organised in such a way that one has to first worship Dakshinamurti before proceeding to the rest of the temple.",
+      "about_para8":"The inscriptions at this temple are quite fascinating. One is about a brahmin lady who installed a murti of Vinayakar in a temple, and made an endowment of paddy and oil for lighting lamps for the temple. Another inscription deals with the community here agreeing to provide daily worship and offerings (neivedyam) at this temple, instead of interest on some gold they had received as loan from a person."
+    },
+    "donation_page":{
+      "donation_title":"Purpose Of Donation",
+      "donation_line1":"You can donate for Deity Seva, Anna Daan, Gita-daan, Vidya daan, Temple Support, Sadhu Bhojan, Food for Life and more.",
+      "donation_line2":"As said in Bhagavad Gita 18.5- acts of sacrifice, charity and penance are not to be given up; they must be performed.",
+      "donation_line3":"Indeed, sacrifice, charity and penance purify even the great souls."
+    },
+    "services_page":{
+      "services_title":"Show compassion and love",
+      "page_line1": "for even the most fallen souls and remembering them in our prayers with the online Puja facility.",
+      "page_line2": " Remembering someone in our prayers while maintain distance is a way out during these uncertain times",
+      "page_line3":"His devotees are incredibly dear to Krishna."
+    },
+    "footer":{
+      "follow_us_on": "Follw Us On",
+      "quickLink_text": "Quick Links",
+      "quickLinks":{
+        "footer_home": "Home",
+        "footer_about": "About",
+        "footer_gallery": "Gallery",
+        "footer_donation": "Donation",
+        "footer_services": "Services"
+      },
+      "contact_us": "Contact Us"
+    },
+    "navLinks":{
+      "home":"Home",
+      "about": "About",
+      "events": "Events",
+      "services": "Services",
+      "donation": "Donation",
+      "gallery": "Gallery",
+      "contact_us": "Contact Us"
+    }
+    
+  }

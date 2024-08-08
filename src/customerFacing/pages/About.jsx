@@ -1,13 +1,19 @@
 import React from 'react'
 import banerImg1 from "../../assets/images/about-banner_0.jpg"
+import { Trans, useTranslation } from 'react-i18next';
 
 
 const About = () => {
+  const { t } = useTranslation();
+
     const administration = [
         {name:"Mohan Anchata", position:"President"},
         {name:"Pratik Dudhia", position:"Vice President"},
         {name:"Girish Kaimal", position:"Secretary"},
     ]
+
+    const {about_home, about_god_name, about_home_last } = t("about");
+    const {about_para1, about_para2, about_para3, about_para4, about_para5, about_para6, about_para7, about_para8} = t("about_page")
 
   return (
     <div className='md:container'>
@@ -16,22 +22,45 @@ const About = () => {
             <h1 className='absolute bottom-20 md:right-36 right-12 text-white font-medium md:text-6xl text-3xl'>About</h1>
         </div>
         
-        <div className="history my-12 bg-gradient-to-r from-indigo-300 border-2 drop-shadow-lg md:p-8 p-4">
+        <div className="history my-12 bg-gradient-to-r from-indigo-100 to-lime-50 rounded-3xl font-semibold border-2 drop-shadow-lg md:p-8 p-4">
             <h2 className='text-3xl font-medium'>History</h2>
             <p className="sm:m-4 my-4 sm:px-20 sm:text-xl sm:leading-10">
-            Shri Saibaba Sansthan Trust, Shirdi, is the Governing and
-            Administrative body of Shri Saibaba's Samadhi Temple and all others
-            temples in this premises, and devoted towards teachings of Saibaba{" "}
-            <span className="text-red-600 font-bold"> "Sabka Malik Ek" </span>{" "}
-            and providing amenities to Sai devotees who are visiting Shirdi and
-            Sai Samadhi Temple.
+            {about_home}{" "}
+            <Trans
+              i18nKey={about_god_name}
+              components={{
+                2: <span className="text-red-600 font-bold" />,
+                10: <q />,
+              }}
+            />{" "}
+            {about_home_last}
           </p>
-            <p className='md:container my-2 sm:leading-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero commodi officia, doloremque nulla nisi excepturi possimus distinctio deserunt reiciendis eos at exercitationem a, facilis quo velit necessitatibus suscipit! Doloremque modi doloribus provident, tempore ex aperiam fugit ratione quasi eum ullam ad quia quaerat corrupti vero, et numquam dolorum nihil porro libero amet placeat illo? Pariatur eius nam atque natus suscipit reiciendis a labore, praesentium laudantium hic, voluptatibus magnam placeat magni odio obcaecati aliquam quisquam distinctio cum tenetur fugiat mollitia quo. Accusamus quos consequatur magni fugit cum nihil laboriosam ipsam quam, eveniet facilis. Similique suscipit architecto voluptas incidunt iure doloremque dolor.</p>
+            <p className='md:container my-2 sm:leading-6'>
+                {about_para1}
+            </p>
             <p className="md:container my-2 sm:leading-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eaque in aperiam ullam odit ex laboriosam perferendis. Dolorum, sed? Distinctio doloribus est blanditiis pariatur, hic excepturi facilis atque? Voluptatum quae corrupti labore eum facere nemo cumque necessitatibus laudantium reiciendis eveniet veniam distinctio repellendus, illo quam at. Reprehenderit, libero fugit. Libero, iste asperiores ratione deserunt necessitatibus exercitationem nihil voluptas praesentium itaque modi nobis. Eligendi quibusdam fugit, commodi magnam rerum consequatur nostrum provident! Dicta ipsa consequuntur labore inventore animi, eos laudantium saepe distinctio adipisci, excepturi commodi sint accusantium porro, delectus aliquam consectetur possimus alias vitae temporibus impedit dolor consequatur dolorum. Sunt enim iusto corporis minima, assumenda neque eius nisi consectetur itaque molestiae distinctio quae totam in expedita facilis cum exercitationem. Ea enim harum, molestiae temporibus expedita impedit, doloremque laudantium sequi voluptate at ipsa nam libero, voluptas qui placeat et. Doloremque alias officia, reiciendis, corporis quibusdam unde voluptas quod eveniet dolorem, deserunt nemo?
+                {about_para2}
+            </p>
+            <p className="md:container my-2 sm:leading-6">
+                {about_para3}
+            </p>
+            <p className="md:container my-2 sm:leading-6">
+                {about_para4}
+            </p>
+            <p className="md:container my-2 sm:leading-6">
+                {about_para5}
+            </p>
+            <p className="md:container my-2 sm:leading-6">
+                {about_para6}
+            </p>
+            <p className="md:container my-2 sm:leading-6">
+                {about_para7}
+            </p>
+            <p className="md:container my-2 sm:leading-6">
+                {about_para8}
             </p>
         </div>
-        <div className="administration my-12 bg-gradient-to-r from-indigo-300 border-2 drop-shadow-lg p-8">
+        <div className="administration my-12 bg-gradient-to-r from-indigo-100 to-lime-50 rounded-3xl border-2 drop-shadow-lg p-8">
             <h2 className='text-3xl font-medium'>Administration</h2>
             <div className="flex md:flex-row flex-col gap-4 items-center justify-around my-4 py-2 px-4">
                 {administration.map(({name, position}, index)=>(

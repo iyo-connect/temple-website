@@ -9,6 +9,9 @@ function Home({ annaDhanam, donationDetail, setDonationDetail }) {
   const { t } = useTranslation();
 
   const { line1, line2 } = t("description");
+  const {about_home, about_god_name, about_home_last } = t("about");
+  const {pooja_seva, more} = t("buttons")
+
 
   return (
     <div>
@@ -18,13 +21,11 @@ function Home({ annaDhanam, donationDetail, setDonationDetail }) {
           style={{ backgroundImage: `url(${god1})` }}
         >
           <div className="absolute  bottom-20 left-10 text-white transparent  ">
-            <p className="bg-bold text-2xl mb-2">
-            {line2}
-            </p>
+            <p className="bg-bold text-2xl mb-2">{line2}</p>
             <div className="text-center">
               <button className="rounded px-4 bg-red-800 text-gray-50 p-2 ">
                 <Link to="./services" className="font-bold">
-                  Pooja Seva
+                  {pooja_seva}
                 </Link>
               </button>
             </div>
@@ -36,30 +37,33 @@ function Home({ annaDhanam, donationDetail, setDonationDetail }) {
         <div className="container text-center py-4">
           {/* translation examples */}
           <h1 className="text-4xl mb-4">{t("greeting")}</h1>
+          <p>{line2}</p>
           <Trans
             // i18nKey={"description.line1"}
             i18nKey={line1}
             values={{
-              title: "Temple Name",
+              title: "Sri Kailasanathar Temple",
             }}
             components={{ 1: <b /> }}
           />
-          <p>{line2}</p>
           {/* translation examples */}
 
           <h2 className="text-red-900 sm:text-5xl text-2xl font-bold my-4">
             About
           </h2>
           <p className="sm:m-4 my-4 sm:px-20 sm:text-xl sm:leading-10">
-            Shri Saibaba Sansthan Trust, Shirdi, is the Governing and
-            Administrative body of Shri Saibaba's Samadhi Temple and all others
-            temples in this premises, and devoted towards teachings of Saibaba{" "}
-            <span className="text-red-600 font-bold"> "Sabka Malik Ek" </span>{" "}
-            and providing amenities to Sai devotees who are visiting Shirdi and
-            Sai Samadhi Temple.
+            {about_home}{" "}
+            <Trans
+              i18nKey={about_god_name}
+              components={{
+                2: <span className="text-red-600 font-bold" />,
+                10: <q />,
+              }}
+            />{" "}
+            {about_home_last}
           </p>
           <button className="bg-yellow-600 font-bold text-gray-50 py-2 px-8 rounded">
-            <Link to="/about">More</Link>
+            <Link to="/about">{more}</Link>
           </button>
         </div>
       </section>

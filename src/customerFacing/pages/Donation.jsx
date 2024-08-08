@@ -1,9 +1,13 @@
 import React from "react";
 import banerImg2 from "../../assets/images/banerImg2.jpg";
 import QRcode from "../../assets/images/QRcode.jpeg";
+import { useTranslation } from "react-i18next";
 
 const Donation = ({ donationDetail }) => {
-  console.log(donationDetail);
+  const {t} = useTranslation()
+
+  const {donation_title, donation_line1, donation_line2, donation_line3} = t("donation_page")
+  
   return (
     <div className="container-full">
       <div className="relative mb-4">
@@ -20,14 +24,12 @@ const Donation = ({ donationDetail }) => {
       {/* <h1 className='font-bold md:text-6xl text-3xl text-center text-red-700 my-4'>General Donation</h1> */}
       <div className="container text-center md:px-22 px-12 py-4 bg-red-50 leading-8">
         <h2 className="font-semibold text-3xl mb-2 text-red-700">
-          Purpose of Donation
+          {donation_title}
         </h2>
         <p className="font-semibold">
-          You can donate for Deity Seva, Anna Daan, Gita-daan, Vidya daan,
-          Temple Support, Sadhu Bhojan, Food for Life and more. <br />
-          As said in Bhagavad Gita 18.5- acts of sacrifice, charity and penance
-          are not to be given up; they must be performed. <br /> Indeed,
-          sacrifice, charity and penance purify even the great souls.
+          {donation_line1} <br />
+          {donation_line2} <br /> 
+          {donation_line3}
         </p>
       </div>
       <div>

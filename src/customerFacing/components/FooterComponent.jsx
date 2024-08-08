@@ -1,15 +1,28 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { TbBrandYoutube, TbBrandFacebook } from "react-icons/tb";
 
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const {t} = useTranslation()
+
+  const {follow_us_on, quickLink_text, contact_us} = t("footer")
+  const {footer_home, footer_about, footer_gallery, footer_donation, footer_services} = t("footer.quickLinks")
+
+  const quickLinks = [
+    ["/", footer_home],
+    ["/about", footer_about],
+    ["/gallery", footer_gallery],
+    ["/donation", footer_donation],
+    ["/services", footer_services],
+  ];
   return (
     <footer className="bg-[#f1f2ec] text-gray-800 py-6 px-4">
       <div className="flex sm:flex-row flex-col text-center justify-around m-2">
         <div>
-          <h3 className="font-bold text-xl">Follows Us On</h3>
+          <h3 className="font-bold text-xl">{follow_us_on}</h3>
           <div className="icons flex sm:flex-col  justify-center items-center gap-4 py-4 ">
             <i className="text-2xl  hover:text-gray-600 cursor-pointer">
               <FaInstagram />
@@ -26,37 +39,29 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h3 className="font-bold text-xl">Quick Links</h3>
+          <h3 className="font-bold text-xl">{quickLink_text}</h3>
           <div className="icons flex flex-col items-center gap-4 py-4 font-bold text-gray-600 ">
-            <Link to="/" className="hover:text-gray-400">
-              Home
-            </Link>
-            <Link to="/about" className="hover:text-gray-400">
-              About
-            </Link>
-            <Link to="/gallery" className="hover:text-gray-400">
-              Gallery
-            </Link>
-            <Link to="/donation" className="hover:text-gray-400">
-              Donation
-            </Link>
-            <Link to="/services" className="hover:text-gray-400">
-              Online Pooja
-            </Link>
+            {quickLinks.map(([linkPath, linkName], index) => {
+              return (
+                <Link to={linkPath} key={index}>
+                  {linkName}
+                </Link>
+              );
+            })}
           </div>
         </div>
         <div>
-          <h3 className="font-bold text-center text-xl">Contact Us</h3>
+          <h3 className="font-bold text-center text-xl">{contact_us}</h3>
           <div className="icons flex flex-col items-center gap-4 py-4 text-gray-600 ">
             <p>We're available{`(10 AM - 6 PM)`} </p>
-            <p>Mobile: 9878685848</p>
+            <p>Mobile: 97860 58325</p>
             <p>Email: templewebsite@gmail.com</p>
           </div>
         </div>
       </div>
-      <hr className="border-2 my-4"/>
+      <hr className="border-2 my-4" />
       <div className="copyright text-center">
-        <small>Copyrights &copy; {new Date().getFullYear()} Temple Name </small>
+        <small>Copyrights &copy; {new Date().getFullYear()} Sri Kailasanathar Temple  </small>
       </div>
     </footer>
   );
